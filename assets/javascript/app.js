@@ -2,6 +2,7 @@ $(document).ready(function(){//I need jQuery to run!
     var clockRunning = false;
     var time = 10;
     var correctAnswer;
+
     function count() {
 
         // DONE: increment time by 1, remember we cant use "this" here.
@@ -45,7 +46,7 @@ $(document).ready(function(){//I need jQuery to run!
 		a:"red",
 		b:"purple",
 		c:"blue",
-		d:"yellow",
+		d:"pink",
 		name:"q1",
 		correct:"d",
     },
@@ -55,10 +56,11 @@ $(document).ready(function(){//I need jQuery to run!
         a:"red",
         b:"purple",
         c:"blue",
-        d:"yellow",
+        d:"pink",
         name:"q1",
         correct:"d",
     }
+
 
     //create a function to show the answer and question with loop
     
@@ -88,11 +90,19 @@ $(document).ready(function(){//I need jQuery to run!
         clearInterval(intervalId);
         clockRunning = false;
       }
+$(document).ready(function () {
+                $("input[type='radio']").on('change', function () {
+                    var selectedValue = $("input[name='qs']:checked").val();
+                    if (selectedValue) {
+                        alert("this is the selected value " + selectedValue);
+                    }
+                });
+            });
       
     //text(JSON.stringify(questions[0]));
 
 
-	var generateQuestion = function(obj){
+	/*var generateQuestion = function(obj){
 
 		//We want to get here:
 		// <form>
@@ -173,5 +183,5 @@ $(document).ready(function(){//I need jQuery to run!
 	generateQuestion(questions);
 	$('.my-button').click(gradePage);
 
-
+*/
 })
