@@ -1,0 +1,19 @@
+body{
+	background-color:pink;
+}
+
+.main-content{
+	background-color:yellow;
+}
+#start-button{
+    height:30px; 
+    width:120px; 
+    margin: -20px -50px; 
+    
+    margin-top: 300px;
+
+    position:relative;
+    top:50%; 
+    left:50%;
+
+}
